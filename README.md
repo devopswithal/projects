@@ -1,7 +1,4 @@
 # Git Workflow Demo
 ## Production Branch
 ### Purpose
-This demo is to demonstrate the general flow of work through a Git Workflow model. There will be a max of 5 branches, Production, Hotfix, Integration, Feature 1, and Feature 2. \
-The first commit of each branch will be a README file, similar to this one, to describe the purpose that branch serves, and will contain any relevant documentation for the contained code. \
-*Notice* \
-This branch may not always be up to date with the Integration branch and features being developed. 
+This is the staging branch used to merge into production. A release branch may be necessary as an intermidiate for version tagging and more controls if this branch will serve more as a development branch than staging. A Development branch could also be created from this branch, but that would increase the number and complexity of merges needed to get to production. 
