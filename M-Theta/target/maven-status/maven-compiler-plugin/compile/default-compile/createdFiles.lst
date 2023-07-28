@@ -1,0 +1,9 @@
+com\capstone\quotesapp\model\Quote.class
+com\capstone\quotesapp\model\Song.class
+com\capstone\quotesapp\QuotesAppApplication.class
+com\capstone\quotesapp\repository\SongRepository.class
+com\capstone\quotesapp\controller\MovieController.class
+com\capstone\quotesapp\repository\QuoteRepository.class
+com\capstone\quotesapp\controller\QuoteController.class
+com\capstone\quotesapp\repository\MovieRepository.class
+com\capstone\quotesapp\model\Movie.class
