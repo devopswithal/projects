@@ -15,36 +15,36 @@ So, as a DevOps Architect, you have been asked to build a branching model to dem
 
 
     \# Initialize the repository
-        git init
+        git init 
     
     \# Rename master to Production
-    git branch -M master Production
+    git branch -M master Production 
     
     \# Add README file
     vim README.md # add branch description
-    git add README.md
+    git add README.md \
     git commit README.md -m “First commit: README.md”
     
     \# Create Hotfix and Integrations branches
-    git branch Hotfix
-    git branch Integrations
-    git branch --list
+    git branch Hotfix \
+    git branch Integrations \
+    git branch --list \
 
 
-    \# Switch to Integration branch
-    git checkout Integration
+    \# Switch to Integration branch 
+    git checkout Integration \
     
     \# Add src files to git directory the continue with the following:
-    git add src
-    git commit src -m “Added original app src”
+    git add src \
+    git commit src -m “Added original app src” \
 
 2. Subsequently, create Feature 1 and 2 branches that integrate to the Integration branch as shown in the above figure.
     
     
     \# Create Feature- and Feature-2 branches
-    git branch Feature-1
-    git branch Feature-2
-    git branch --list 
+    git branch Feature-1 \
+    git branch Feature-2 \
+    git branch --list \
 
 3. Commit some changes in the Feature 2 branch and merge it into the Integration branch. Delete this branch once. 
 merging is complete
@@ -54,7 +54,7 @@ merging is complete
     git checkout Feature-2 
 
     \# Add Songs feature files to src then continue with the following:
-    git add <files>
+    git add <files> \
     git commit <files> -m “Added Songs Controller, Model, & Repository”
 
     \# Switch to Integration branch
@@ -73,7 +73,7 @@ merging is complete
     git checkout Feature-1
 
     \# Add Movies feature files to src then continue with the following:
-    git add <files>
+    git add <files> \
     git commit src <files> -m “Added Movies Controller, Model, & Repository”
 
     \# Rebase Feature-1 branch to the end of Integration
@@ -82,34 +82,50 @@ merging is complete
 5. Merge the Integration branch into Hotfix and Production branch to update these branches.
 
 
-    git checkout Hotfix
-    git merge Integration -m “Updating Hotfix with Features-1,2”
-    git checkout Production
+    \# Merge into Hotfix 
+    git checkout Hotfix \
+    git merge Integration -m “Updating Hotfix with Features-1,2” \
+
+    \# Merge into Production
+    git checkout Production \
     git merge Integration -m “Updating Production with Features-1,2”
 
 6. Commit some changes in Feature 1 branch, and then merge it into Integration, Hotfix, and Production branch. Delete 
 this branch once merging is complete.
 
 
-    Add changes to src
-    git add <files>
-    git commit <files> -m “Updated Feature-1”
-    git checkout Integration
-    git merge Feature-1
-    git checkout Hotfix
-    git merge Integration
-    git checkout Production
-    git merge Integration
-    git branch -D Feature-1
+    \# Commit changes to src
+    git add <files> \
+    git commit <files> -m “Updated Feature-1” \
+
+    \# Merge into Integration
+    git checkout Integration \
+    git merge Feature-1 \
+
+    \# Merge into Hotfix
+    git checkout Hotfix \
+    git merge Integration \
+
+    \# Merge into Production
+    git checkout Production \
+    git merge Integration \
+    
+    \# Delete Feature-1 Branch
+    git branch -D Feature-1 \
 
 7. Commit some changes in the Hotfix branch and merge it into the Production as well as the Integration branch
 
 
-    git checkout Hotfix
-    Make changes to application.properties file
-    git add <files>
-    git commit <files> -m “Fixed connection bug”
-    git checkout Integration
-    git merge Hotfix
-    git checkout Production
-    git merge Hotfix
+    \#Make changes to application.properties file
+    git checkout Hotfix \
+
+    \# Commit those changes
+    git add <files> \
+    git commit <files> -m “Fixed connection bug” \
+
+    \# Merge into Integration
+    git checkout Integration \
+
+    \# Merge into
+    git checkout Production \
+    git merge Hotfix \
