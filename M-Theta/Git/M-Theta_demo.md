@@ -20,30 +20,29 @@ So, as a DevOps Architect, you have been asked to build a branching model to dem
     ```
     git branch -M master Production 
     ```
-Add README file
-```
-vim README.md # add branch description
-git add README.md \
-git commit README.md -m “First commit: README.md”
-```
-     Create Hotfix and Integrations branches
-```
-git branch Hotfix \
-git branch Integrations \
-git branch --list \
-```
-
-     Switch to Integration branch 
-```
-git checkout Integration \
-```
-     Add src files to git directory the continue with the following:
-```
-git add src \
-git commit src -m “Added original app src” \
-```
+    Add README file
+    ```
+    vim README.md # add branch description
+    git add README.md \
+    git commit README.md -m “First commit: README.md”
+    ```
+    Create Hotfix and Integrations branches
+    ```
+    git branch Hotfix \
+    git branch Integrations \
+    git branch --list \
+    ```
+    Switch to Integration branch 
+    ```
+    git checkout Integration \
+    ```
+    Add src files to git directory the continue with the following:
+    ```
+    git add src \
+    git commit src -m “Added original app src” \
+    ```
 2. Subsequently, create Feature 1 and 2 branches that integrate to the Integration branch as shown in the above figure.
-  -  Create Feature- and Feature-2 branches
+   -  Create Feature- and Feature-2 branches
 ```
 git branch Feature-1 \
 git branch Feature-2 \
