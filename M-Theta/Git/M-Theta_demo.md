@@ -16,11 +16,11 @@ So, as a DevOps Architect, you have been asked to build a branching model to dem
 ```
     git init 
 ```
-    Rename master to Production
+Rename master to Production
 ```
 git branch -M master Production 
 ```
-     Add README file
+Add README file
 ```
 vim README.md # add branch description
 git add README.md \
