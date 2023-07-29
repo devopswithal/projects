@@ -12,11 +12,11 @@ So, as a DevOps Architect, you have been asked to build a branching model to dem
 
 ### Tasks:
 1. Start with the Production branch (master branch), and then create a HotFix  and Integration branch
--  Initialize the repository
+    Initialize the repository
 ```
     git init 
 ```
--  Rename master to Production
+    Rename master to Production
 ```
 git branch -M master Production 
 ```
