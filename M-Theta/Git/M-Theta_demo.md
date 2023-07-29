@@ -14,34 +14,34 @@ So, as a DevOps Architect, you have been asked to build a branching model to dem
 1. Start with the Production branch (master branch), and then create a HotFix  and Integration branch
 
 
-    # Initialize the repository
+    \# Initialize the repository
         git init
     
-    # Rename master to Production
+    \# Rename master to Production
     git branch -M master Production
     
-    # Add README file
+    \# Add README file
     vim README.md # add branch description
     git add README.md
     git commit README.md -m “First commit: README.md”
     
-    # Create Hotfix and Integrations branches
+    \# Create Hotfix and Integrations branches
     git branch Hotfix
     git branch Integrations
     git branch --list
 
 
-    # Switch to Integration branch
+    \# Switch to Integration branch
     git checkout Integration
     
-    # Add src files to git directory the continue with the following:
+    \# Add src files to git directory the continue with the following:
     git add src
     git commit src -m “Added original app src”
 
 2. Subsequently, create Feature 1 and 2 branches that integrate to the Integration branch as shown in the above figure.
     
     
-    # Create Feature- and Feature-2 branches
+    \# Create Feature- and Feature-2 branches
     git branch Feature-1
     git branch Feature-2
     git branch --list 
@@ -50,33 +50,33 @@ So, as a DevOps Architect, you have been asked to build a branching model to dem
 merging is complete
 
 
-    #Switch to Feature-2 branch
+    \#Switch to Feature-2 branch
     git checkout Feature-2 
 
-    # Add Songs feature files to src then continue with the following:
+    \# Add Songs feature files to src then continue with the following:
     git add <files>
     git commit <files> -m “Added Songs Controller, Model, & Repository”
 
-    # Switch to Integration branch
+    \# Switch to Integration branch
     git checkout Integration 
 
-    # Merge Feature-2 into Integration
+    \# Merge Feature-2 into Integration
     git merge Feature-2
 
-    # Delete Feature-2 branch
+    \# Delete Feature-2 branch
     git branch -D Feature-2
 
 4. Commit some changes in the Feature 1 branch and rebase it to the Integration branch.
 
 
-    # Switch to Feature-1 branch 
+    \# Switch to Feature-1 branch 
     git checkout Feature-1
 
-    # Add Movies feature files to src then continue with the following:
+    \# Add Movies feature files to src then continue with the following:
     git add <files>
     git commit src <files> -m “Added Movies Controller, Model, & Repository”
 
-    # Rebase Feature-1 branch to the end of Integration
+    \# Rebase Feature-1 branch to the end of Integration
     git rebase Integration
 
 5. Merge the Integration branch into Hotfix and Production branch to update these branches.
